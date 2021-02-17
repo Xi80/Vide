@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <title>Vide</title>
+        <meta name="description" content="MIDIと電子工作" />
+
+        <link rel="icon" href="favicon.jpg">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <base target="_top">
+    </head>
+
+    <body>
+        <div id="layout">
+            <div id="header"></div>
+
+            <div id="menu">
+                <object type="text/html" data="menu.html" width="800" height="30"></object>
+
+            </div>
+
+            <div id="main">
+                <!--メインのコンテンツですよ！！！-->
+                <h1>Welcome!</h1>
+                    <p>
+                        Videへようこそ！<br>
+                        このサイトでは電子工作，MIDIに関する制作物の情報などを公開しています．
+                    </p>
+                <h1>あしあと</h1>
+                    <p id="history">
+                        <!--
+                            textarea，別のファイルから読みに行けたらいいのにね
+                            インデントが崩壊してしまう
+                            ==>解決しました
+                        -->
+                    </p>
+                <h1>お知らせ</h1>
+                    <h2>ホームページを作りました！</h2>
+                        <p>
+                            <a href="index.html"><img src="img/top.jpg" class="imgb" alt="Homepage Picture"></a><br>
+                            ようやく作る気が出てきたので作成しました．
+                        </p>
+                <h1>このサイトについて</h1>
+                    <p>
+                        開設:2021/02/16<br>
+                        最終更新:2021/02/16(Vide Alpha)<br>
+                        管理人:C0ntRA1L<br>
+                    </p>
+            </div>
+
+            <div id="side">
+                <object type="text/html" data="side.html" width="250"></object>
+            </div>
+
+            <div id="footer">
+                <object type="text/html" data="footer.html" width="800" height="30"></object>
+
+            </div>
+
+        </div>
+
+        <!--
+            textareaだけ別ファイルで置きたいという欲求から生まれた不浄なるスクリプト．
+        -->
+        <script>
+            let xhr = new XMLHttpRequest(),
+                method = "GET",
+                url = "history.txt";
+            let box = document.getElementById("history");
+
+            xhr.open(method, url, true);
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState === 4 && xhr.status === 200) {
+                    box.innerHTML=xhr.responseText;
+                }
+            };
+            xhr.send();
+        </script>
+    </body>
+
+</html>

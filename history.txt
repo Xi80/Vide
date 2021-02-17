@@ -1,0 +1,4 @@
+<textarea type="text" rows="5" style="" readonly>
+21/02/16    ページ制作開始
+
+</textarea>
