@@ -36,6 +36,11 @@
                             インデントが崩壊してしまう
                             ==>解決しました
                         -->
+                        <label>
+                            <textarea rows="5" style="" readonly>
+
+                            </textarea>
+                        </label>
                     </p>
                 <h1>お知らせ</h1>
                     <h2>ホームページを作りました！</h2>
@@ -52,7 +57,7 @@
             </div>
 
             <div id="side">
-                <object type="text/html" data="side.html" width="250"></object>
+                <object type="text/html" data="side.html" width="250" height="400"></object>
             </div>
 
             <div id="footer">
@@ -69,7 +74,7 @@
             let xhr = new XMLHttpRequest(),
                 method = "GET",
                 url = "history.txt";
-            let box = document.getElementById("history");
+            let box = document.getElementById("history").children[0].children[0];
 
             xhr.open(method, url, true);
             xhr.onreadystatechange = function () {
