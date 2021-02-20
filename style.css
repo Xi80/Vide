@@ -20,6 +20,7 @@
 
 #main{
     width: 547px;
+	height: 100vh;
     float: left;
     border-right: 1px solid #0088ff;
 }
@@ -27,6 +28,7 @@
 #side{
     width: 250px;
     float: right;
+    overflow:hidden;
 }
 
 #footer{
@@ -34,6 +36,7 @@
     clear: both;
     border-top: 1px solid #0088ff;
     padding: 0.5em 0 0.5em 0;
+    overflow:hidden;
 }
 
 div.music{
@@ -62,6 +65,10 @@ div.right{
     content: "";
     display: block;
     clear: both;
+}
+
+#menu {
+    overflow:hidden;
 }
 
 #menu ul{
@@ -95,7 +102,6 @@ body{
     font-size: 12px;
     color: #494949;
     line-height: 1.5em;
-    overflow:hidden;
 }
 
 a{
@@ -235,4 +241,12 @@ textarea{
 
 .textRight{
     text-align: right;
+}
+
+.eqtext{
+    width:380px;
+}
+
+.articlePic{
+	width:500px;
 }

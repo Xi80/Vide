@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <title>Vide</title>
+        <meta name="description" content="MIDIと電子工作" />
+
+        <link rel="icon" href="../favicon.jpg">
+        <link rel="stylesheet" href="../style.css" type="text/css">
+
+    </head>
+
+    <body>
+        <div id="layout">
+            <div id="header"></div>
+
+            <div id="menu">
+                <object type="text/html" data="../menu.html" width="800" height="30"></object>
+            </div>
+
+            <div id="main" class="hideScroll">
+                <!--メインのコンテンツですよ！！！-->
+				<h1>MIDIをマイコンで扱うときの個人的なまとめ</h1>
+					<p>2021-02-20</p>
+					<hr>
+					<p>
+						基本的に受信しか使わないためここでは受信側の記述に留める．
+					</p>
+						
+						<h2>回路編</h2>
+							<p>
+								まず，基本的な受信回路を以下に示す．<br>
+								<img src="../img/midi_recv.jpg" alt="MIDI Receive Circuit" class="articlePic"><br>
+								基本的に上記の回路で問題はない．<br>
+								規格書に記載されていたり，メジャーなPC900VやPC910はすでに終売らしいので<br>
+								基本的にはTLP2361(SOP)，TLP2630(DIP)あたりを使うことになる．<br>
+								なぜ１回路で十分なのにTLP552を使わないのかといえば，<br>
+								単純に秋月で取り扱いがあるのがこの２つだからである．<br>
+							</p>
+						<h2>ソフトウェア編</h2>
+							<p>
+								MIDIの規格書に従えば何も難しいことはない．<br>
+								ネットの海を見て思った点をいくつか挙げると<br>
+								- MIDIのメッセージを固定長だと思っている人がいる<br>
+								- ノートオフメッセージが必ず送信されるものだと思っている人がいる<br>
+								- システムエクスクルーシブの存在を知らない人がいる<br>
+								こんな感じである.<br>
+								とりあえず１つずつ述べていこうと思う．
+							</p>
+            </div>
+
+            <div id="side">
+                <object type="text/html" data="../side.html" width="250" height="400"></object>
+            </div>
+
+            <div id="footer">
+                <object type="text/html" data="../footer.html" width="800" height="30"></object>
+            </div>
+        </div>
+    </body>
+</html>
